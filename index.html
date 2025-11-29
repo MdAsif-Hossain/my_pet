@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawsome Paradise Pet Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Scrollbar (Chrome, Safari, Edge) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* Custom Scrollbar (Firefox) */
+        /* (This is limited in what you can style) */
+        /* You might need a JS library for full control */
+        /* html { */
+        /*   scrollbar-width: thin; */
+        /*   scrollbar-color: #888 #f1f1f1; */
+        /* } */
+    </style>
+</head>
+
+<body class="font-inter antialiased bg-zinc-50">
+    <!-- Header / Navbar -->
+    <header class="fixed w-full z-50 bg-white/90 backdrop-blur shadow-md transition-all duration-300">
+        <div class="container mx-auto px-6 py-3 flex items-center justify-between">
+            <a href="#" class="text-2xl font-bold text-emerald-600">
+                Pawsome Paradise
+            </a>
+
+            <!-- Desktop Navigation (Hidden on Mobile) -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-emerald-500 transition-colors duration-300">Home</a>
+                <a href="#shop" class="hover:text-emerald-500 transition-colors duration-300">Shop</a>
+                <a href="#services" class="hover:text-emerald-500 transition-colors duration-300">Services</a>
+                <a href="#about" class="hover:text-emerald-500 transition-colors duration-300">About</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-gray-800 focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by Default) -->
+        <div id="mobile-menu"
+            class="hidden absolute top-full left-0 w-full bg-white shadow-md py-4 px-6 flex flex-col gap-4">
+            <a href="#" class="hover:text-emerald-500 transition-colors duration-300 block">Home</a>
+            <a href="#shop" class="hover:text-emerald-500 transition-colors duration-300 block">Shop</a>
+            <a href="#services" class="hover:text-emerald-500 transition-colors duration-300 block">Services</a>
+            <a href="#about" class="hover:text-emerald-500 transition-colors duration-300 block">About</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="min-h-[80vh] bg-gradient-to-br from-emerald-100 to-blue-100 flex items-center justify-center py-20">
+            <div class="container mx-auto text-center">
+                <h1 class="text-5xl font-bold text-emerald-700 mb-4">
+                    Your Pet's Happy Place
+                </h1>
+                <p class="text-xl text-gray-700 mb-8">
+                    Discover premium pet supplies, expert grooming services, and a community that loves pets as much as
+                    you do.
+                </p>
+                <a href="#shop"
+                    class="inline-block bg-emerald-600 text-white py-3 px-8 rounded-xl hover:bg-emerald-500 transition-colors duration-300 shadow-lg">
+                    Shop Now
+                </a>
+            </div>
+        </section>
+
+        <!-- Shop Section -->
+        <section id="shop" class="py-16">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-semibold text-gray-800 text-center mb-8">
+                    Featured Products
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Product Card 1 -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300">
+                        <img src="https://source.unsplash.com/random/800x600/?dogfood" alt="Dog Food"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Premium Dog Food</h3>
+                            <p class="text-gray-600 mb-4">Made with high-quality ingredients for a healthy and happy dog.</p>
+                            <span class="text-emerald-600 font-bold">$29.99</span>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2 -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300">
+                        <img src="https://source.unsplash.com/random/800x600/?cattoy" alt="Cat Toy"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Interactive Cat Toy</h3>
+                            <p class="text-gray-600 mb-4">Keeps your cat entertained for hours with its interactive design.</p>
+                            <span class="text-emerald-600 font-bold">$14.99</span>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3 -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300">
+                        <img src="https://source.unsplash.com/random/800x600/?dogbed" alt="Dog Bed"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Comfortable Dog Bed</h3>
+                            <p class="text-gray-600 mb-4">Provides a cozy and supportive space for your dog to rest and relax.</p>
+                            <span class="text-emerald-600 font-bold">$49.99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="bg-gray-100 py-16">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-semibold text-gray-800 text-center mb-8">
+                    Our Services
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Professional Grooming</h3>
+                        <p class="text-gray-600 mb-6">
+                            Our experienced groomers provide a range of services, from bathing and haircuts to nail
+                            trims and teeth cleaning. We use only the best products and techniques to ensure your pet
+                            looks and feels their best.
+                        </p>
+                        <a href="#" class="text-emerald-600 hover:text-emerald-500 transition-colors duration-300">Learn More</a>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Expert Pet Advice</h3>
+                        <p class="text-gray-600 mb-6">
+                            Our knowledgeable staff is always available to answer your questions and provide guidance
+                            on pet care, nutrition, and training. We can help you choose the right products for your
+                            pet's needs and offer tips for creating a happy and healthy environment.
+                        </p>
+                        <a href="#" class="text-emerald-600 hover:text-emerald-500 transition-colors duration-300">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <!-- Image -->
+                    <div>
+                        <img src="https://source.unsplash.com/random/800x600/?petstore" alt="Pet Store"
+                            class="rounded-2xl shadow-xl">
+                    </div>
+
+                    <!-- Text -->
+                    <div>
+                        <h2 class="text-3xl font-semibold text-gray-800 mb-4">About Pawsome Paradise</h2>
+                        <p class="text-gray-700 mb-6">
+                            At Pawsome Paradise, we're passionate about pets. We believe that pets are family, and they
+                            deserve the best. That's why we offer a wide selection of high-quality products and services
+                            to meet all your pet's needs. From premium food and toys to grooming and expert advice,
+                            we're here to help you provide a happy and healthy life for your furry friends.
+                        </p>
+                        <p class="text-gray-700">
+                            Our mission is to create a community of pet lovers who share a common goal: to provide the
+                            best possible care for their pets. We invite you to join us and discover the Pawsome
+                            Paradise difference.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <!-- Copyright -->
+            <p class="text-sm">&copy; 2024 Pawsome Paradise. All rights reserved.</p>
+
+            <!-- Social Links -->
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-gray-300 transition-colors duration-300">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.668 9.116 8.431 9.893v-6.981H7.89v-2.912h2.542V9.883c0-2.515 1.517-3.91 3.848-3.91 1.113 0 2.052.082 2.352.119v2.7h-2.021c-.827 0-1.076.417-1.076 1.051v1.446h2.217l-.284 2.912h-1.932v6.981C18.332 21.116 22 16.991 22 12z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="#" class="hover:text-gray-300 transition-colors duration-300">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.048 1.567.18 2.212.477.644.297 1.252.644 1.772 1.164.52.52.867 1.128 1.164 1.772.296.644.429 1.147.477 2.212.048 1.024.06 1.378.06 3.808 0 2.43-.013 2.784-.06 3.808-.048 1.064-.18 1.567-.477 2.212-.297.644-.644 1.252-1.164 1.772-.52.52-1.128.867-1.772 1.164-.644.296-1.147.429-2.212.477-1.024.048-1.378.06-3.808.06-2.43 0-2.784-.013-3.808-.06-1.064-.048-1.567-.18-2.212-.477-.644-.297-1.252-.644-1.772-1.164-.52-.52-.867-1.128-1.164-1.772-.296-.644-.429-1.147-.477-2.212-.048-1.024-.06-1.378-.06-3.808 0-2.43.013-2.784.06-3.808.048-1.064.18-1.567.477-2.212.297-.644.644-1.252 1.164-1.772.52-.52 1.128-.867 1.772-1.164.644-.296 1.147-.429 2.212-.477 1.024-.048 1.378-.06 3.808-.06zm0 2.16c-2.834 0-5.131 2.297-5.131 5.131 0 2.834 2.297 5.131 5.131 5.131 2.834 0 5.131-2.297 5.131-5.131 0-2.834-2.297-5.131-5.131-5.131zm0 8.463a3.333 3.333 0 1 1 0-6.666 3.333 3.333 0 0 1 0 6.666zm5.338-3.205a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z" />
+                    </svg>
+                </a>
+                <a href="#" class="hover:text-gray-300 transition-colors duration-300">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M19.633 7.997c.013.174.013.348.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.316.038.635.058.959.058 1.822 0 3.516-.612 4.87-1.642-1.703-.035-3.128-1.153-3.64-2.707.222.043.443.067.665.067.392 0 .779-.053 1.146-.141-1.793-.358-3.108-1.969-3.108-3.915.518.27 1.11.434 1.733.45.084-.27.144-.548.144-.84 0-.553-.225-1.007-.605-1.365 1.875.93 3.905 1.487 6.084 1.546-.345-1.335-.549-2.731-.549-4.168 0-.918.247-1.799.681-2.477 2.229 2.873 5.569 4.507 9.166 4.61-.187-.903-.292-1.848-.292-2.849 0-6.88 5.644-12.488 12.488-12.488 1.33 0 2.555.225 3.639.593-1.057-.032-2.07-.325-2.976-.825.917.293 1.723.756 2.408 1.305-.562-.018-1.136-.088-1.708-.177.558.58 1.229 1.106 1.977 1.565.412-.108.807-.211 1.185-.301-.264.395-.597.734-.978 1.005z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
